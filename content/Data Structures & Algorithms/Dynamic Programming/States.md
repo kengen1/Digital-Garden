@@ -1,4 +1,0 @@
-
-## State Definition
-
-## State Transition

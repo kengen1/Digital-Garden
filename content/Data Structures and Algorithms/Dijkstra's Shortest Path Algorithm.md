@@ -23,8 +23,8 @@
     - Calculate the distance from the source node to this adjacent node
     - If this calculated distance is smaller than the known distance, update the distance and add the node to the priority queue
 
-3. Repeat until the priority queue is empty
-4. Output the shortest distance from the source node to each other node
+1. Repeat until the priority queue is empty
+2. Output the shortest distance from the source node to each other node
 
 ## 3. Implementation
 ```cpp
