@@ -1,0 +1,5 @@
+- a special actor that ensures that work is executed on the **main thread**
+- documentation definition:
+	- *"A singleton actor whose [[Executor|executor]] is equivalent to the main dispatch queue"*
+- Unlike regular actors, which create separate instances, `MainActor` is a single, shared instance across the entire application 
+- The `MainActor` executor is tied to the main dispatch queue (`DispatchQueue.main`)
