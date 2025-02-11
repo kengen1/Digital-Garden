@@ -1,11 +1,6 @@
 ---
 title: Welcome to My Digital Garden
 ---
----
-title: "Welcome to My Digital Garden"
----
-
-# Welcome to My Digital Garden
 
 Hello there! This is my space on the web where I explore ideas, share knowledge, and document my learning journey. Powered by [Quartz](https://quartz.jzhao.xyz/), this site is a living, evolving collection of notes and thoughts.
 
