@@ -31,6 +31,35 @@ This post on [networked thought](https://jzhao.xyz/posts/networked-thought) real
 
 ---
 
+I am currently in the process of **backfilling content** from past learning, so a large portion of files may be **unpopulated** or **partially written**. This vault will continue to grow as I document more insights and refine existing notes.
+
 ### 📌 Featured Notes
 
-*TBC.*
+Here are some of the key topics I've managed to write about so far:
+
+Career & Wisdom
+- [[Sharing Knowledge]]
+- [[Context-Driven Decision Making]]
+- [[Communicating Complex Ideas]]
+- [[The Grug Brained Developer]]
+
+Engineering
+- [[Cloud Computing Explained]]
+- [[SQL vs. NoSQL: Choosing the Right Tool]]
+- [[The Essence of API Design]]
+- [[Server vs. Serverless]]
+- [[Functional Programming]]
+
+Data Structures & Algorithms
+- [[Graphs]]
+- [[Graph Traversal]]
+- [[Binary Tree]]
+- [[Tree Traversal]]
+- [[Binary Search Tree (BST)]]
+- [[Sliding Window]]
+- [[Two Pointers]]
+- ADM Chapter [[08. Dynamic Programming]]
+- [[Vector Amortized Time]]
+
+Reading
+[[2025 Reading List]]
