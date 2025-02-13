@@ -37,20 +37,20 @@ I am currently in the process of **backfilling content** from past learning, so 
 
 Here are some of the key topics I've managed to write about so far:
 
-Career & Wisdom
-- [[Sharing Knowledge]]
-- [[Context-Driven Decision Making]]
-- [[Communicating Complex Ideas]]
-- [[The Grug Brained Developer]]
-
-Engineering
+**Engineering**:
 - [[Cloud Computing Explained]]
 - [[SQL vs. NoSQL]]
 - [[The Essence of API Design]]
 - [[Server vs. Serverless]]
 - [[Functional Programming]]
 
-Data Structures & Algorithms
+**Career & Wisdom**:
+- [[The Grug Brained Developer]]
+- [[Sharing Knowledge]]
+- [[Context-Driven Decision Making]]
+- [[Communicating Complex Ideas]]
+
+**Data Structures & Algorithms**:
 - [[Graphs]]
 - [[Graph Traversal]]
 - [[Binary Tree]]
@@ -61,5 +61,5 @@ Data Structures & Algorithms
 - ADM Chapter [[08. Dynamic Programming]]
 - [[Vector Amortized Time]]
 
-Reading
+**Reading**:
 [[2025 Reading List]]
