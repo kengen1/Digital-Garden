@@ -45,7 +45,7 @@ Career & Wisdom
 
 Engineering
 - [[Cloud Computing Explained]]
-- [[SQL vs. NoSQL: Choosing the Right Tool]]
+- [[SQL vs. NoSQL]]
 - [[The Essence of API Design]]
 - [[Server vs. Serverless]]
 - [[Functional Programming]]
