@@ -17,4 +17,6 @@ Watch this: https://www.youtube.com/watch?v=mBNrRy2_hVs
 
 ### Unbounded Knapsack
 
+### State Machine
+
 ### 4. Longest Common Subsequence
