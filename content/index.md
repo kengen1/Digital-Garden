@@ -51,6 +51,7 @@ Here are some of the key topics I've managed to write about so far:
 - [[Communicating Complex Ideas]]
 
 **Data Structures & Algorithms**:
+- [[Dynamic Programming]]
 - [[Graphs]]
 - [[Graph Traversal]]
 - [[Binary Tree]]
@@ -58,7 +59,6 @@ Here are some of the key topics I've managed to write about so far:
 - [[Binary Search Tree (BST)]]
 - [[Sliding Window]]
 - [[Two Pointers]]
-- ADM Chapter [[08. Dynamic Programming]]
 - [[Vector Amortized Time]]
 
 **Reading**:
