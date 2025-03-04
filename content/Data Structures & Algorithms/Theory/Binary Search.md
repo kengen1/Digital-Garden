@@ -23,15 +23,10 @@ int binarySearch(const vector<int>& arr, int target) {
     while (left <= right) {
         int mid = left + (right - left) / 2;  // Avoid overflow
 
-        if (arr[mid] == target)
-            return mid;  // Target found
-
-        if (arr[mid] < target)
-            left = mid + 1;  // Search the right half
-        else
-            right = mid - 1;  // Search the left half
+        if (arr[mid] == target) return mid;  // Target found
+        if (arr[mid] < target) left = mid + 1;  // Search the right half
+        else right = mid - 1;  // Search the left half
     }
-
     return -1;  // Target not found
 }
 
