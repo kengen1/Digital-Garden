@@ -22,11 +22,53 @@
 	- The stack contains the nodes in reverse topological order
 	- Pop elements from the stack to get the correct order
 
-
-#### Code C++
-
+#### Pseudocode
 ```cpp
+vector<int> topologicalSort(int numNodes, vector<vector<int>>& edges) {
+    // Step 1: Build Adjacency List
+    vector<vector<int>> adjList(numNodes);
+    for (auto& edge : edges) {
+        int from = edge[0], to = edge[1];
+        adjList[from].push_back(to);
+    }
 
+    // Step 2: Initialize DFS tracking variables
+    vector<int> visited(numNodes, 0);
+    stack<int> topoStack;
+    vector<int> result;
+
+    // Step 3: Perform DFS on all unvisited nodes
+    for (int node = 0; node < numNodes; node++) {
+        if (visited[node] == 0) {
+            if (dfs(node, adjList, visited, topoStack))
+                return {};  // Cycle detected, return empty array
+        }
+    }
+
+    // Step 4: Extract topological order
+    while (!topoStack.empty()) {
+        result.push_back(topoStack.top());
+        topoStack.pop();
+    }
+
+    return result;
+}
+
+// DFS function to detect cycles and perform topological sorting
+bool dfs(int node, vector<vector<int>>& adjList, vector<int>& visited, stack<int>& topoStack) {
+    if (visited[node] == 1) return true;  // Cycle detected
+    if (visited[node] == 2) return false; // Already processed
+
+    visited[node] = 1; // Mark as visiting
+    for (int neighbor : adjList[node]) {
+        if (dfs(neighbor, adjList, visited, topoStack))
+            return true;  // Cycle detected
+    }
+
+    visited[node] = 2; // Mark as processed
+    topoStack.push(node); // Add to stack
+    return false;
+}
 ```
 
 ---
@@ -51,9 +93,47 @@
 4. Check for cycles
 	- if the final topological order does not contain all nodes, a cycle exists
 
-#### Code C++
+#### Pseudocode
 
 ```cpp
+vector<int> topologicalSortBFS(int numNodes, vector<vector<int>>& edges) {
+    // Step 1: Build adjacency list and compute in-degrees
+    vector<vector<int>> adjList(numNodes);
+    vector<int> inDegree(numNodes, 0);
+
+    for (auto& edge : edges) {
+        int from = edge[0], to = edge[1];
+        adjList[from].push_back(to);
+        inDegree[to]++;
+    }
+
+    // Step 2: Initialize queue with nodes having in-degree 0
+    queue<int> q;
+    for (int node = 0; node < numNodes; node++) {
+        if (inDegree[node] == 0)
+            q.push(node);
+    }
+
+    // Step 3: Process queue
+    vector<int> order;
+    while (!q.empty()) {
+        int node = q.front();
+        q.pop();
+        order.push_back(node);
+
+        for (int neighbor : adjList[node]) {
+            inDegree[neighbor]--;
+            if (inDegree[neighbor] == 0)
+                q.push(neighbor);
+        }
+    }
+
+    // Step 4: Check for cycle
+    if (order.size() != numNodes)
+        return {};  // Cycle detected
+
+    return order;
+}
 
 ```
 
