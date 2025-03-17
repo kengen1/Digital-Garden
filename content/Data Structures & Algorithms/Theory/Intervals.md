@@ -72,4 +72,49 @@ int eraseOverlapIntervals(vector<vector<int>>& intervals) {
 ---
 ### Sweep Line Algorithm + Event Sorting
 
+Useful for interval problems where we need to track :
+- how many intervals are active at a given point
+- the maximum number of overlapping intervals
 
+Approach:
+- convert intervals into events `(start, +1)` and `(end, -1)`
+- sort events: if two events have the same time, process end event first
+- keep a running count
+
+```cpp
+int maxEvents(vector<vector<int>>& events) {
+    vector<pair<int, int>> timeline;
+    for (auto& e : events) {
+        timeline.emplace_back(e[0], 1);  // Start of event
+        timeline.emplace_back(e[1], -1); // End of event
+    }
+    sort(timeline.begin(), timeline.end()); // Sort by time
+
+    int maxAttend = 0, ongoing = 0;
+    for (auto& [time, change] : timeline) {
+        ongoing += change;
+        maxAttend = max(maxAttend, ongoing);
+    }
+    return maxAttend;
+}
+```
+
+---
+### Binary Search for Efficient Interval Lookup
+
+If we need to quickly find an interval, we can use binary search (`lower_bound / upper_bound)
+Works well when searching for next available intervals
+
+```cpp
+vector<int> findRightInterval(vector<vector<int>>& intervals) {
+    map<int, int> starts; // Stores {start, index}
+    for (int i = 0; i < intervals.size(); i++) starts[intervals[i][0]] = i;
+
+    vector<int> res;
+    for (auto& interval : intervals) {
+        auto it = starts.lower_bound(interval[1]); // Find the next interval
+        res.push_back(it == starts.end() ? -1 : it->second);
+    }
+    return res;
+}
+```
