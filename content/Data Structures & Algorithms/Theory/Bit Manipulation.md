@@ -98,7 +98,7 @@ int toggleBit(int n, int k) {
 int singleNonRepeating(vector<int>& nums) {
     int result = 0;
     for(int num : nums) {
-        result ^= nums;
+        result ^= num;
     }
     return result;
 }
